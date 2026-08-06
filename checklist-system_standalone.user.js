@@ -117,7 +117,7 @@
 // @copyright           2026, _init (https://greasyfork.org/users/1594049)
 
 // @namespace           https://greasyfork.org/users/1594049
-// @version             2.0.0
+// @version             2.0.1
 // @author              _init
 // @icon                https://geofs-assets.evengao6688.workers.dev/icons/checklist-system.png
 // @match               https://www.geo-fs.com/geofs.php*
@@ -127,13 +127,13 @@
 // @updateURL https://update.greasyfork.org/scripts/581516/GeoFS-V39_Checklist-System.meta.js
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(() => {
+    
 
     /**
      * Initialization Guard: Ensures the checklist engine only boots once per session.
      */
-    window.initChecklistSystem = function() {
+    window.initChecklistSystem = () => {
         if (window.checklistSystem) return;
 
         console.log("[GeoFS-V3.9_Checklist-System] >> INITIALIZING CHECKLIST ENGINE...");
@@ -292,7 +292,7 @@
                 this.currentAircraft = name;
                 
                 let found = false;
-                for (let key in DEFAULT_CHECKLISTS) {
+                for (const key in DEFAULT_CHECKLISTS) {
                     if (name.includes(key)) {
                         this.currentChecklist = JSON.parse(JSON.stringify(DEFAULT_CHECKLISTS[key]));
                         found = true;
@@ -437,7 +437,7 @@
                         case 'gear': return anim.gear > 0.5;
                         case 'lights': return !!(anim.lights || ac.lights);
                         case 'airbrakes': return anim.airbrakes > 0;
-                        case 'flaps':
+                        case 'flaps': {
                             const target = anim.flapsTarget || 0;
                             // Physical Logic: Robust flap detection across different airframe definitions
                             let effectiveMax = (acData && acData.maxFlaps !== undefined) ? acData.maxFlaps : (ac.definition.flapsSteps ? ac.definition.flapsSteps.length - 1 : (ac.definition.flapsPositions ? ac.definition.flapsPositions.length - 1 : 1));
@@ -446,6 +446,7 @@
                             if (val === 'full') return target >= effectiveMax;
                             if (val !== undefined) return target === parseInt(val);
                             return anim.flapsValue > 0 || target > 0;
+                        }
                         default: return false;
                     }
                 };
@@ -505,7 +506,7 @@
              * 
              * @param {string} syncStr - The telemetry sync action string.
              */
-            triggerGameAction: function(syncStr) {
+            triggerGameAction: (syncStr) => {
                 if (!geofs.aircraft.instance || !syncStr) return;
                 const ac = geofs.aircraft.instance;
                 const anim = geofs.animation.values;
@@ -527,7 +528,7 @@
                             geofs.animation.values.gear = anim.gear > 0.5 ? 0 : 1;
                         }
                         break;
-                    case 'flaps':
+                    case 'flaps': {
                         const acId = geofs.aircraft.instance?.id;
                         const acData = (window.AIRCRAFT_DATA && acId) ? window.AIRCRAFT_DATA[acId] : null;
                         let actionMax = (acData && acData.maxFlaps !== undefined) ? acData.maxFlaps : maxFlaps;
@@ -540,6 +541,7 @@
                             ac.setFlaps(cur === 0 ? (actionMax > 1 ? 1 : 1) : 0);
                         }
                         break;
+                    }
                     case 'lights':
                         // Light toggle functionality is currently bypassed due to GeoFS internal state synchronization limitations.
                         break;
