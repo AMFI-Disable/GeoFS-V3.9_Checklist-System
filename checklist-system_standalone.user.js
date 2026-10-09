@@ -51,57 +51,57 @@
 // @name:lo             GeoFS-V3.9_ລະບົບລາຍການກວດສອບ
 // @name:ur             GeoFS-V3.9_چیک-لسٹ-سسٹم
 
-// @description         Aircraft-specific procedural checklists with immersive feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:vi      Danh sách kiểm tra quy trình dành riêng cho máy bay với phản hồi sâu sắc. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zh-CN   具有沉浸式反馈的飞机特定程序检查表。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zh-TW   具有沉浸式回饋的飛機特定程序檢查表。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ja      臨場感あふれるフィードバックを備えた航空機固有の手順チェックリスト。 © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ko      몰입형 피드백이 포함된 항공기별 절차 체크리스트입니다. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fr      Listes de contrôle procédurales spécifiques à l'avion avec retour immersif. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:de      Flugzeugspezifische Verfahrenschecklisten mit umfassendem Feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:es      Listas de verificación de procedimientos específicos de cada aeronave con retroalimentación inmersiva. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pt-BR   Listas de verificação de procedimentos específicos para aeronaves com feedback envolvente. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pt-PT   Listas de verificação de procedimentos específicos para aeronaves com feedback envolvente. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ru      Процедурные контрольные списки для конкретных самолетов с иммерсивной обратной связью. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ar      قوائم مرجعية إجرائية خاصة بالطائرات مع تعليقات غامرة. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:tr      Kapsamlı geri bildirim içeren, uçağa özel prosedür kontrol listeleri. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:id      Daftar periksa prosedur khusus pesawat dengan umpan balik yang mendalam. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:th      รายการตรวจสอบขั้นตอนเฉพาะของเครื่องบินพร้อมผลตอบรับที่สมจริง © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:pl      Listy kontrolne procedur specyficzne dla statku powietrznego z wciągającymi informacjami zwrotnymi. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:nl      Vliegtuigspecifieke procedurele checklists met meeslepende feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:it      Elenchi di controllo procedurali specifici dell'aeromobile con feedback coinvolgente. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sv      Flygplansspecifika procedurchecklistor med uppslukande feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:da      Flyspecifikke proceduremæssige tjeklister med fordybende feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fi      Lentokonekohtaiset menettelyjen tarkistuslistat mukaansatempaavalla palautteella. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:nb      Flyspesifikke prosedyresjekklister med oppslukende tilbakemeldinger. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:cs      Procedurální kontrolní seznamy specifické pro letadla s pohlcující zpětnou vazbou. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hu      Repülőgép-specifikus eljárási ellenőrző listák magával ragadó visszajelzéssel. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ro      Liste de verificare procedurale specifice aeronavei cu feedback captivant. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:uk      Процедурні контрольні списки для конкретних літаків із ефектним відгуком. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hi      व्यापक फीडबैक के साथ विमान-विशिष्ट प्रक्रियात्मक जाँच सूचियाँ। © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:bn      নিমজ্জিত প্রতিক্রিয়া সহ বিমান-নির্দিষ্ট পদ্ধতিগত চেকলিস্ট। © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fa      چک لیست های رویه ای خاص هواپیما با بازخورد همه جانبه. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:he      רשימות צ'ק הליכים ספציפיות למטוס עם משוב סוחף. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ms      Senarai semak prosedur khusus pesawat dengan maklum balas yang mendalam. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:fil     Mga checklist ng pamamaraang tukoy sa eroplano na may nakaka-engganyong feedback. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:el      Λίστες ελέγχου διαδικασιών για συγκεκριμένα αεροσκάφη με καθηλωτική ανατροφοδότηση. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:hr      Proceduralne kontrolne liste specifične za zrakoplov s impresivnim povratnim informacijama. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sk      Postupové kontrolné zoznamy špecifické pre lietadlá s pohlcujúcou spätnou väzbou. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:bg      Процедурни контролни списъци за конкретни самолети с потапяща обратна връзка. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sr      Процедуралне контролне листе специфичне за авион са импресивним повратним информацијама. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lt      Konkrečiam orlaiviui skirti procedūrų kontroliniai sąrašai su įtraukiančiais atsiliepimais. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lv      Gaisa kuģim raksturīgi procedūru kontrolsaraksti ar visaptverošu atgriezenisko saiti. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:et      Õhusõidukipõhised protseduuride kontrollnimekirjad koos kõikehõlmava tagasisidega. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sl      Postopkovni kontrolni seznami za posamezno letalo z impresivnimi povratnimi informacijami. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ca      Llistes de verificació de procediments específiques de l'aeronau amb comentaris immersius. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:af      Vliegtuigspesifieke prosedurekontrolelyste met meeslepende terugvoer. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:sw      Orodha za ukaguzi za taratibu mahususi za ndege zenye maoni ya kina. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:zu      Uhlu lokuhlola lwenqubo oluqondene nendiza enempendulo egxilile. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:mn      Онгоцны тусгай журмын хяналтын хуудас, сэтгэлд хоногшсон санал хүсэлт. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:my      အာရုံစူးစိုက်မှုရှိသော တုံ့ပြန်ချက်ဖြင့် လေယာဉ်သီးသန့်လုပ်ထုံးလုပ်နည်း စစ်ဆေးစာရင်းများ။ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:km      បញ្ជីត្រួតពិនិត្យនីតិវិធីជាក់លាក់របស់យន្តហោះ ជាមួយនឹងមតិកែលម្អយ៉ាងជ្រាលជ្រៅ។ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:lo      ບັນຊີລາຍການກວດສອບຂັ້ນຕອນສະເພາະຂອງເຮືອບິນທີ່ມີຄໍາຄຶດຄໍາເຫັນທີ່ເລິກເຊິ່ງ. © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
-// @description:ur      عمیق تاثرات کے ساتھ ہوائی جہاز کے لیے مخصوص طریقہ کار کی چیک لسٹ۔ © 2026 _init. Part of the GeoFS-V3.9_Ecosystem.
+// @description         Aircraft-specific procedural checklists with immersive feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:vi      Danh sách kiểm tra quy trình dành riêng cho máy bay với phản hồi sâu sắc. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zh-CN   具有沉浸式反馈的飞机特定程序检查表。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zh-TW   具有沉浸式回饋的飛機特定程序檢查表。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ja      臨場感あふれるフィードバックを備えた航空機固有の手順チェックリスト。 © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ko      몰입형 피드백이 포함된 항공기별 절차 체크리스트입니다. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fr      Listes de contrôle procédurales spécifiques à l'avion avec retour immersif. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:de      Flugzeugspezifische Verfahrenschecklisten mit umfassendem Feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:es      Listas de verificación de procedimientos específicos de cada aeronave con retroalimentación inmersiva. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pt-BR   Listas de verificação de procedimentos específicos para aeronaves com feedback envolvente. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pt-PT   Listas de verificação de procedimentos específicos para aeronaves com feedback envolvente. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ru      Процедурные контрольные списки для конкретных самолетов с иммерсивной обратной связью. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ar      قوائم مرجعية إجرائية خاصة بالطائرات مع تعليقات غامرة. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:tr      Kapsamlı geri bildirim içeren, uçağa özel prosedür kontrol listeleri. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:id      Daftar periksa prosedur khusus pesawat dengan umpan balik yang mendalam. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:th      รายการตรวจสอบขั้นตอนเฉพาะของเครื่องบินพร้อมผลตอบรับที่สมจริง © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:pl      Listy kontrolne procedur specyficzne dla statku powietrznego z wciągającymi informacjami zwrotnymi. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:nl      Vliegtuigspecifieke procedurele checklists met meeslepende feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:it      Elenchi di controllo procedurali specifici dell'aeromobile con feedback coinvolgente. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sv      Flygplansspecifika procedurchecklistor med uppslukande feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:da      Flyspecifikke proceduremæssige tjeklister med fordybende feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fi      Lentokonekohtaiset menettelyjen tarkistuslistat mukaansatempaavalla palautteella. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:nb      Flyspesifikke prosedyresjekklister med oppslukende tilbakemeldinger. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:cs      Procedurální kontrolní seznamy specifické pro letadla s pohlcující zpětnou vazbou. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hu      Repülőgép-specifikus eljárási ellenőrző listák magával ragadó visszajelzéssel. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ro      Liste de verificare procedurale specifice aeronavei cu feedback captivant. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:uk      Процедурні контрольні списки для конкретних літаків із ефектним відгуком. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hi      व्यापक फीडबैक के साथ विमान-विशिष्ट प्रक्रियात्मक जाँच सूचियाँ। © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:bn      নিমজ্জিত প্রতিক্রিয়া সহ বিমান-নির্দিষ্ট পদ্ধতিগত চেকলিস্ট। © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fa      چک لیست های رویه ای خاص هواپیما با بازخورد همه جانبه. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:he      רשימות צ'ק הליכים ספציפיות למטוס עם משוב סוחף. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ms      Senarai semak prosedur khusus pesawat dengan maklum balas yang mendalam. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:fil     Mga checklist ng pamamaraang tukoy sa eroplano na may nakaka-engganyong feedback. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:el      Λίστες ελέγχου διαδικασιών για συγκεκριμένα αεροσκάφη με καθηλωτική ανατροφοδότηση. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:hr      Proceduralne kontrolne liste specifične za zrakoplov s impresivnim povratnim informacijama. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sk      Postupové kontrolné zoznamy špecifické pre lietadlá s pohlcujúcou spätnou väzbou. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:bg      Процедурни контролни списъци за конкретни самолети с потапяща обратна връзка. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sr      Процедуралне контролне листе специфичне за авион са импресивним повратним информацијама. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lt      Konkrečiam orlaiviui skirti procedūrų kontroliniai sąrašai su įtraukiančiais atsiliepimais. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lv      Gaisa kuģim raksturīgi procedūru kontrolsaraksti ar visaptverošu atgriezenisko saiti. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:et      Õhusõidukipõhised protseduuride kontrollnimekirjad koos kõikehõlmava tagasisidega. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sl      Postopkovni kontrolni seznami za posamezno letalo z impresivnimi povratnimi informacijami. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ca      Llistes de verificació de procediments específiques de l'aeronau amb comentaris immersius. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:af      Vliegtuigspesifieke prosedurekontrolelyste met meeslepende terugvoer. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:sw      Orodha za ukaguzi za taratibu mahususi za ndege zenye maoni ya kina. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:zu      Uhlu lokuhlola lwenqubo oluqondene nendiza enempendulo egxilile. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:mn      Онгоцны тусгай журмын хяналтын хуудас, сэтгэлд хоногшсон санал хүсэлт. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:my      အာရုံစူးစိုက်မှုရှိသော တုံ့ပြန်ချက်ဖြင့် လေယာဉ်သီးသန့်လုပ်ထုံးလုပ်နည်း စစ်ဆေးစာရင်းများ။ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:km      បញ្ជីត្រួតពិនិត្យនីតិវិធីជាក់លាក់របស់យន្តហោះ ជាមួយនឹងមតិកែលម្អយ៉ាងជ្រាលជ្រៅ។ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:lo      ບັນຊີລາຍການກວດສອບຂັ້ນຕອນສະເພາະຂອງເຮືອບິນທີ່ມີຄໍາຄຶດຄໍາເຫັນທີ່ເລິກເຊິ່ງ. © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
+// @description:ur      عمیق تاثرات کے ساتھ ہوائی جہاز کے لیے مخصوص طریقہ کار کی چیک لسٹ۔ © 2026 AMFI-Disable. Part of the GeoFS-V3.9_Ecosystem.
 
 // @require             https://update.greasyfork.org/scripts/581510/code.js
 // @require             https://update.greasyfork.org/scripts/581511/code.js
@@ -114,11 +114,11 @@
 // @compatible          safari
 // @compatible          brave
 // @compatible          opera
-// @copyright           2026, _init (https://greasyfork.org/users/1594049)
+// @copyright           2026, AMFI-Disable (https://greasyfork.org/users/1594049)
 
 // @namespace           https://greasyfork.org/users/1594049
 // @version             2.0.1
-// @author              _init
+// @author              AMFI-Disable
 // @icon                https://geofs-assets.evengao6688.workers.dev/icons/checklist-system.png
 // @match               https://www.geo-fs.com/geofs.php*
 // @grant               none
