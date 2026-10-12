@@ -6,13 +6,19 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
+    name: Validate Userscript
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Basic File Check
+      - uses: actions/checkout@v6
+      - name: Validate Userscript Syntax
         run: |
-          # Ensuring core files exist (using generic pattern)
-          ls *.user.js || echo "No .user.js found"
-          ls *.js || echo "No .js found"
+          for file in *.user.js; do
+            [ -f "$file" ] || continue
+            node --check "$file"
+            echo "Validated syntax: $file"
+          done
