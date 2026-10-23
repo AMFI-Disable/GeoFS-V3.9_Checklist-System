@@ -10,11 +10,16 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    name: Validate Userscript
+  quality:
+    name: Codebase & Syntax Validation
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout Code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
       - name: Validate Userscript Syntax
         run: |
           for file in *.user.js; do
@@ -22,3 +27,49 @@ jobs:
             node --check "$file"
             echo "Validated syntax: $file"
           done
+
+      - name: Validate YAML Files
+        run: |
+          ruby -ryaml -e '
+            Dir.glob(".github/**/*.{yml,yaml}").each do |f|
+              YAML.safe_load(File.read(f))
+              puts "Validated: #{f}"
+            end
+          '
+
+      - name: Verify Lowercase Filenames
+        run: |
+          if git ls-files | grep -v '^CNAME$' | grep '[A-Z]'; then
+            echo "Error: uppercase tracked files found"
+            exit 1
+          fi
+          echo "All tracked files are lowercase."
+
+      - name: Verify Commit Message Conventions
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          python3 -c '
+          import subprocess, re, os
+          pattern = re.compile(r"^[a-z]+: [a-z0-9]+ [a-z0-9]+ [a-z0-9]+$")
+          base_sha = os.environ.get("BASE_SHA", "")
+
+          if base_sha and not re.match(r"^0+$", base_sha):
+              rev_range = f"{base_sha}..HEAD"
+          else:
+              rev_range = "HEAD~1..HEAD"
+
+          try:
+              commits = subprocess.check_output(["git", "log", rev_range, "--format=%H %s"]).decode().strip().split("\n")
+          except Exception:
+              commits = subprocess.check_output(["git", "log", "-1", "--format=%H %s"]).decode().strip().split("\n")
+
+          commits = [c for c in commits if c.strip()]
+          for c in commits:
+              sha, msg = c.split(" ", 1)
+              if msg.startswith("Merge "):
+                  continue
+              if not pattern.match(msg):
+                  raise SystemExit(f"Invalid commit message {sha[:7]}: {msg}")
+          print(f"Validated {len(commits)} commit messages.")
+          '
