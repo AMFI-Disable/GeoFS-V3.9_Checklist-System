@@ -117,9 +117,9 @@
 // @copyright           2026, AMFI-Disable (https://greasyfork.org/users/1594049)
 
 // @namespace           https://greasyfork.org/users/1594049
-// @version             2.0.1
+// @version             2.0.5
 // @author              AMFI-Disable
-// @icon                https://geofs-assets.evengao6688.workers.dev/icons/checklist-system.png
+// @icon                https://www.geo-fs.com/images/icons/favicon.ico
 // @match               https://www.geo-fs.com/geofs.php*
 // @grant               none
 // @license             MIT
@@ -290,11 +290,11 @@
              */
             init: function() {
                 const checksHTML = `
-                    <div id="hud-checklist-display" style="background: rgba(0,0,0,0.3); padding: 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12); margin: 0; max-height: 400px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255, 159, 5, 0.3) transparent; width: 100%; box-sizing: border-box;">
+                    <div id="hud-checklist-display" style="background: rgba(0,0,0,0.3); padding: 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12); margin: 0; max-height: 400px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.3) transparent; width: 100%; box-sizing: border-box;">
                         <div style="color: rgba(255,255,255,0.5); font-size: 10px; text-align: center; padding: 20px 0;">Initializing...</div>
                     </div>
                 `;
-                window.registerHUDTab('checks', 'CHECKLIST', checksHTML, false);
+                window.registerHUDTab('checks', 'CHECKS', checksHTML, false);
                 setTimeout(() => this.detectAircraft(), 1000);
 
                 // Telemetry Synthesis: Background loop for automated item completion
@@ -335,7 +335,7 @@
                         this.currentAircraft = acData.name;
                     }
 
-                    if (window.V39_NOTIF) window.V39_NOTIF.info(`Checklist Engine Ready: ${this.currentAircraft}`);
+
                 }
                 
                 this.updateUI();
@@ -377,31 +377,31 @@
                 }
 
                 let html = `
-                    <div style="font-size: 10px; color: #ff9f05; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 4px; width: 100%; box-sizing: border-box;">${this.currentAircraft}</div>
+                    <div style="font-size: 10px; color: #dddddd; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 4px; width: 100%; box-sizing: border-box;">${this.currentAircraft}</div>
                     <div style="display: flex; gap: 4px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; width: 100%;">
                 `;
 
                 // Render Phase Tabs
                 this.currentChecklist.forEach((phase, idx) => {
                     const isActive = this.currentPhase === idx;
-                    html += `<div onclick="window.checklistSystem.setPhase(${idx})" style="flex: 1; text-align: center; padding: 5px 2px; font-size: 9px; font-weight: 800; border-radius: 4px; background: ${isActive ? '#ff9f05' : 'rgba(255,255,255,0.05)'}; color: ${isActive ? '#000' : 'rgba(255,255,255,0.5)'}; cursor: pointer; white-space: nowrap; transition: all 0.2s;">${phase.title.split(' ')[0]}</div>`;
+                    html += `<div onclick="window.checklistSystem.setPhase(${idx})" style="flex: 1; text-align: center; padding: 5px 2px; font-size: 10px; font-weight: 800; border-radius: 4px; background: ${isActive ? '#4caf50' : 'rgba(255,255,255,0.05)'}; color: ${isActive ? '#fff' : 'rgba(255,255,255,0.5)'}; cursor: pointer; white-space: nowrap; transition: all 0.2s;">${phase.title.split(' ')[0]}</div>`;
                 });
                 html += `</div>`;
 
                 const renderSection = (section, sIdx, isEmergency = false) => {
                     if (!isEmergency && sIdx !== this.currentPhase) return '';
                     let sHtml = `<div style="margin-bottom: 15px; width: 100%; box-sizing: border-box;">
-                        <div style="font-size: 10px; font-weight: bold; margin-bottom: 6px; color: ${isEmergency ? '#ef4444' : 'rgba(255,255,255,0.7)'}; background: ${isEmergency ? 'rgba(239,68,68,0.1)' : 'rgba(255,255,255,0.03)'}; padding: 3px 6px; border-radius: 4px; border-left: 2px solid ${isEmergency ? '#ef4444' : '#ff9f05'}; text-transform: uppercase; letter-spacing: 0.5px;">${section.title}</div>
+                        <div style="font-size: 10px; font-weight: bold; margin-bottom: 6px; color: ${isEmergency ? '#ef4444' : 'rgba(255,255,255,0.7)'}; background: ${isEmergency ? 'rgba(239,68,68,0.1)' : 'rgba(255,255,255,0.03)'}; padding: 3px 6px; border-radius: 4px; border-left: 2px solid ${isEmergency ? '#ef4444' : '#dddddd'}; text-transform: uppercase; letter-spacing: 0.5px;">${section.title}</div>
                         <div style="display: flex; flex-direction: column; gap: 3px; width: 100%;">`;
                     
                     section.items.forEach((item, iIdx) => {
                         const id = (isEmergency ? 'emg-' : 'chk-') + sIdx + '-' + iIdx;
                         const isDone = this.completedItems.has(id);
                         sHtml += `
-                            <div onclick="window.checklistSystem.toggleItem('${id}')" style="display: flex; flex-direction: column; cursor: pointer; padding: 5px; border-radius: 4px; background: ${isDone ? 'rgba(16,185,129,0.08)' : 'rgba(255,255,255,0.015)'}; transition: all 0.15s; border: 1px solid ${isDone ? 'rgba(16,185,129,0.2)' : 'rgba(255,255,255,0.02)'}; width: 100%; box-sizing: border-box;">
+                            <div onclick="window.checklistSystem.toggleItem('${id}')" style="display: flex; flex-direction: column; cursor: pointer; padding: 5px; border-radius: 4px; background: transparent; transition: all 0.15s; border: 0; width: 100%; box-sizing: border-box;">
                                 <div style="display: flex; align-items: center; gap: 6px; width: 100%;">
                                     <div style="min-width: 10px; height: 10px; border: 1px solid ${isDone ? '#10b981' : (isEmergency ? '#ef4444' : 'rgba(255,255,255,0.2)')}; border-radius: 2px; display: flex; align-items: center; justify-content: center;">
-                                        ${isDone ? '<span style="color: #10b981; font-size: 8px;">✓</span>' : ''}
+                                        ${isDone ? '<span style="color: #10b981; font-size: 10px;">✓</span>' : ''}
                                     </div>
                                     <span style="font-size: 10px; font-weight: 700; color: ${isDone ? 'rgba(255,255,255,0.4)' : '#fff'}; text-decoration: ${isDone ? 'line-through' : 'none'}; flex: 1;">
                                         ${item.sync ? (this.isUnregistered ? '<span style="color: #ef4444; margin-right: 4px;">[UNSUPPORTED]</span>' : '<span style="color: #fbbf24; margin-right: 4px;">⚡</span>') : ''}${item.text}
@@ -423,8 +423,8 @@
                 if (this.isUnregistered) {
                     html += `
                         <div style="margin-top: 12px; padding: 8px; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 4px;">
-                            <div style="color: #ef4444; font-size: 8px; font-weight: 900; text-transform: uppercase; margin-bottom: 2px;">⚠️ Sync Unavailable</div>
-                            <div style="color: rgba(255,255,255,0.4); font-size: 7.5px; line-height: 1.2; font-style: italic;">
+                            <div style="color: #ef4444; font-size: 10px; font-weight: 900; text-transform: uppercase; margin-bottom: 2px;">⚠️ Sync Unavailable</div>
+                            <div style="color: rgba(255,255,255,0.4); font-size: 10px; line-height: 1.2; font-style: italic;">
                                 Manual mode active. Technical telemetry for ID [${this.missingId}] is not in the registry. Automated checklist completion is disabled.
                             </div>
                         </div>
